@@ -1,19 +1,22 @@
 import { Daemon, Magician } from '../magician + daemon';
 
-test('create Magician', () => {
-    const received = new Magician();
-    const expected = {
-        attack: 25,
-        defence: 35
-    }
+test('class Daemon stoned', () => {
 
-    expect(received).toEqual(expected);
+    let daedra = new Daemon;
+    daedra.distance = 2;
+    daedra.attack = 70;
+    daedra.stoned = 5;
+    const expected = 5;
+
+    expect(daedra.stoned).toBe(expected);
 });
 
-test('magician with stoned', () => {
-    let person = new Magician;
-    const received = person.stoned;
-    const expected = 25;
+test('class Daemon attack', () => {
+    let daedra = new Daemon;
+    daedra.distance = 2;
+    const received = daedra.attack;
+
+    const expected = 90;
 
     expect(received).toBe(expected);
 })
